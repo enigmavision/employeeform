@@ -1,0 +1,30 @@
+/* HEADER */
+.myHeader{
+	width:100%;
+	min-height:120px;
+	border:1px solid lightblue;
+	margin-bottom:15px;
+	text-align: center;
+}
+
+h1{
+	color:white;
+	font-family: "Palatino Linotype", "Book Antiqua", serif;
+}
+
+/* BUTTONS */
+
+#getDataBtn, #newEmployeeBtn{
+	color:#039be5;
+	margin-bottom: 20px;
+	font-family: "Palatino Linotype", "Book Antiqua", serif;
+}
+
+/* SEND FORM */
+#sendButton{
+	padding:10px;
+}
+
+#sendButton:hover{
+	color:#26a69a;
+}
