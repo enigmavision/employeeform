@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="initial-scale=1.0">
+    <!-- Compiled and minified jquery -->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <!-- Materialize Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <!-- Import our CSS -->
+    <link rel='stylesheet' href='css/myStyle.css' type='text/css'>
+    <!-- Titles are important for SEO -->
+    <title>I just built a full-stack app!</title>
+</head>
+
+<body>
+    <header class='center myHeader light-blue'>
+        <h1>Join our Team!</h1>
+    </header>
+    <div class='row'>
+        <div class='col m2 2'></div>
+        <form id='newEmployeeForm' method='POST' action='/newEmployee' class='col s12 m8 8'>
+            <section class="row">
+                <div class="input-field col s12 m6 6">
+                    <input type="text" id="first_name" name="first_name" placeholder="First Name" />
+                    <label for="first_name">First name</label>
+                </div>
+                <div class="input-field col s12 m6 6">
+                    <input type="text" id="last_name" name="last_name" placeholder="Last Name" />
+                    <label for="last_name">Last Name</label>
+                </div>
+            </section>
+            <section class="row">
+                <div class="input-field col s12 m12 12">
+                    <input type="text" id="age" name="age" placeholder="Age" />
+                    <label for="age">Age</label>
+                </div>
+                <div class="input-field col s12 m12 12">
+                    <input type="text" id="enjoys" name="enjoys" placeholder="Enjoys" />
+                    <label for="enjoys">Enjoys</label>
+                </div>
+            </section>
+            <section class='row'>
+                <span class='col s5 m5 5'></span>
+                <button class='col s2 m2 2' type="submit" class="center">
+                    <i class="material-icons small" id='sendButton'>email</i>
+                </button>
+                <span class='col s5 m5 5'></span>
+            </section>
+        </form>
+        <div class='col m2 2'></div>
+    </div>
+    <!-- Load our own JS file -->
+    <script src="javascript/frontend.js"></script>
+</body>
+
+</html>
