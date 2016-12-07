@@ -1,0 +1,16 @@
+CREATE DATABASE employeeRegistry;
+USE employeeRegistry;
+
+CREATE TABLE employees(
+	id INTEGER(11) AUTO_INCREMENT NOT NULL,
+	PRIMARY KEY(id),
+	first_name VARCHAR(100),
+	last_name VARCHAR(100),
+	age INTEGER(3),
+	enjoys VARCHAR(120)
+);
+
+INSERT INTO employees (first_name, last_name, age, enjoys) VALUES ('John', 'Doe', '22', 'Helping debug code');
+INSERT INTO employees (first_name, last_name, age, enjoys) VALUES ('Paul', 'Lane', '36', 'Back-End code');
+INSERT INTO employees (first_name, last_name, age, enjoys) VALUES ('Ron', 'Bax', '25', 'Designing graphic interfaces');
+INSERT INTO employees (first_name, last_name, age, enjoys) VALUES ('Cher', 'Knowles', '28', 'User interface design');
