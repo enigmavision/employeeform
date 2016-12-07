@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="initial-scale=1.0">
+    <!-- Compiled and minified jquery -->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <!-- Materialize Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <!-- Import our CSS -->
+    <link rel='stylesheet' href='css/myStyle.css' type='text/css'>
+    <!-- Titles are important for SEO -->
+    <title>I just built a full-stack app!</title>
+</head>
+
+<body>
+	<header class='myHeader light-blue'>
+	    <h1>Employee Form</h1>
+	    <button id='getDataBtn'>BRING ME DATA!</button>
+	    <button id='newEmployeeBtn'><a href='/newEmployee'>ADD NEW EMPLOYEE!</a></button>
+    </header>
+    <div class='row'>
+        <div class="col s0 m2 3"></div>
+        <table class="col s12 m8 6 striped centered">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Age</th>
+                    <th>Enjoys</th>
+                </tr>
+            </thead>
+            <!-- shove our results into here -->
+            <tbody id="dataTable">
+            </tbody>
+        </table>
+        <div class="col s0 m2 3"></div>
+    </div>
+    <!-- Load our own JS file -->
+    <script src="javascript/frontend.js"></script>
+</body>
+
+</html>
