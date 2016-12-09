@@ -23,9 +23,12 @@
     </header>
     <div class='row'>
         <div class='col m2 2'></div>
+        <!-- In this form, we're setting the id for styling purposes. The method and action here combine together to send a POST request to the route of '/newEmployee' that we set up in our routes.js. Since POST is an HTTP method, there is no need for any additional JS here -->
         <form id='newEmployeeForm' method='POST' action='/newEmployee' class='col s12 m8 8'>
             <section class="row">
                 <div class="input-field col s12 m6 6">
+                    <!-- Also note, we're setting all of our id's and names to match our database structure. This way when we send the request, this input of first_name can be accessed as req.body.first_name in our routes.js -->
+
                     <input type="text" id="first_name" name="first_name" placeholder="First Name" />
                     <label for="first_name">First name</label>
                 </div>

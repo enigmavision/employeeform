@@ -1,28 +1,39 @@
-$(document).ready(function(){
-  console.log('JS is linked');
+$(document).ready(function() {
+    //confirm your js!
+    console.log('JS is linked');
+    //on click of get data button, populate our tables with our DB data.
+    $('#getDataBtn').on('click', function() {
+        //AJAX our DB with a GET request to a route we've set up.
+        $.ajax({
+            url: '/getMyData',
+            method: 'GET'
+        }).done(function(res) {
+            //with the received response, do the following.
 
-  $('#getDataBtn').on('click', function(){
-    $.ajax({
-      url:'/getMyData',
-      method:'GET'
-    }).done(function(res){
-      console.log(res);
+            //always check your data so you can parse through it.
+            console.log(res);
 
-      $('#dataTable').html('');
+            //delete old data from the table to avoid a long list of duplicates on your webpage.
+            $('#dataTable').html('');
 
-      let dataToInsert='';
+            //placeholder value to hold our upcoming table data.
+            let dataToInsert = '';
 
-      for(let i=0; i<res.length; i++){
-        dataToInsert += '<tr>'
-        '<th>' + res[i].first_name + '<th>'
-        '<tr>' + '<th>' + res[i].last_name + '<th>'+
-        '<tr>' + '<th>' + res[i].age + '<th>'+
-        '<tr>' + '<th>' + res[i].enjoys + '<th>' +
-      }
+            //loop through returned results of our ajax call and create table rows.
 
-      //end loop
-      
+            for (let i = 0; i < res.length; i++) {
+                dataToInsert +=
+                    '<tr>' +
+                    '<th>' + res[i].first_name + '</th>' +
+                    '<th>' + res[i].last_name + '</th>' +
+                    '<th>' + res[i].age + '</th>' +
+                    '<th>' + res[i].enjoys + '<th>' +
+                    '</tr>';
+            }; //end loop
 
-  });//end done
-});//end click
-}); //end ready
+            //once loop is finished, shove all that data onto the page.
+            $('#dataTable').html(dataToInsert);
+            
+        }); //end done
+    }); //end click
+}); //End document.ready
